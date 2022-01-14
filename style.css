@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+h1 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+#mainbuttons {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+#mainbuttons > button {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spread Operator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Spread Operator</h1>
+            <span id="mainbuttons"></span>
+        </header>
+        <main>
+            <h2 id="resultQ"></h2>
+            <div id="results"></div>
+        </main>
+        <script id="mainscript"></script>
+        <script>
+            function CriarButtons () 
+            {
+                const bts = ["a", "b", "c"];
+                const mainButtons = document.getElementById("mainbuttons");
+                bts.forEach(l => {mainButtons.innerHTML += `<button onclick="ChangeTo('${l}')">Questão ${l.toUpperCase()}</button>`;});    
+            }
+            CriarButtons ();
+            var mainScript;
+            var resultQ = document.getElementById("resultQ");
+            var results = document.getElementById("results");
+            function ChangeTo (l)
+            {
+                if(mainScript) {
+                    mainScript.remove();
+                }
+                mainScript = document.createElement("script");
+                mainScript.src = `${l}/index.js`;
+                resultQ.innerText = `Resultados ${l.toUpperCase()}`;
+                document.body.append(mainScript);
+            }
+            function PrintLog (...args) 
+            {
+                results.innerText = "";
+                args.forEach(x => 
+                {
+                    results.innerText += x;
+                }); 
+            }
+        </script>
+    </body>
+</html>
