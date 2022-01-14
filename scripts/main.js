@@ -23,4 +23,4 @@ function PrintLog (...args)
     args.forEach(x => { results.innerText += x; }); 
 }
 
-CriarButtons (["a", "b", "c"]);
+CriarButtons ("a", "b", "c");
